@@ -8,7 +8,7 @@ const isProduction = 'production'
 
 const config = {
     entry: {
-        employees: './src/employees.jsx',
+        root: './src/root.jsx',
     },
     output: {
         filename: '[name].bundle.js',

@@ -1,8 +1,7 @@
 import React from 'react'
 import { Route, Routes, Navigate } from 'react-router-dom'
-//import EmployeeList from './EmployeeList.jsx'
-//import EmployeeReport from './EmployeeReport.jsx'
-//import EmployeeEdit from './EmployeeEdit.jsx'
+import FullFilter from './filter.jsx'
+
 
 // responsible for switching between views
 // route component takes in route and component to show
@@ -12,7 +11,7 @@ export default function Contents(){
     // '/' is the redirect to the employees page and * is the catch all to redirect to page not found
     return (
         <Routes>
-            <Route path="/levels" element={<PLACEHOLDER/>}/>
+            <Route path="/levels" element={<FullFilter/>}/>
             <Route path='/' element={<Navigate replace to ="/levels"/>}/>
             <Route path='*' element={<NotFound/>}/>
         </Routes>

@@ -1,0 +1,40 @@
+import React from "react";
+import { Badge, Button, Table, Card, Modal, Container } from 'react-bootstrap'
+import { useLocation, Link } from 'react-router-dom'
+
+//
+export default function SubFilters (){
+    // import data from state or api call
+    // filter data based on drop
+
+    // GET THE URL 
+    const { search } = useLocation()
+    // GET THE PARAMETERS FROM THE URL
+    const query = new URLSearchParams(search)
+    // GET THE boolean 'levels' pARAMETER SPECIFICALLY
+    const q = query.get('levels')
+    const employeeRows = props.employees
+    // filter which dropdowns to show
+    .filter(filterChoice => (q?String(employee.currentlyEmployed)===q:true))//check employee value from query. Does it match current employed value in data
+    .map(filterChoice => 
+        <EmployeeRow 
+            key={employee._id} 
+            employee={employee} 
+            deleteEmployee={props.deleteEmployee} />)
+
+    return (
+        <select 
+            //get employee parameter from url string. If none, set to empty and select "all" from dropdown
+            value = {searchParams.get('combination') || ""}
+            onChange={(e)=> navigate(e.target.value ? 
+            `/levels?combination=${e.target.value}`:
+            `/levels`)}>
+            <option value="gem">Gem</option>
+            <option value="ascendency">Ascendency</option>
+            <option value="gemAndAscendency">Gem &amp; Ascendency</option>
+        </select>
+    )
+}
+    //filter for gems
+    //filter for ascendencies
+    // button to add to chart

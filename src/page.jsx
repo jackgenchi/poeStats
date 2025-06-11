@@ -9,7 +9,8 @@ function NavBar(){
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="/" className="ml-3">Poe Stats</Navbar.Brand>
             <Nav>
-                <Nav.Link href="/charts">Top Performers</Nav.Link>
+                <Nav.Link href="/top">Top Gems and Ascendencies</Nav.Link>
+                <Nav.Link href="/creators">Build Creator Ranking</Nav.Link>
             </Nav>         
         </Navbar>
     )
